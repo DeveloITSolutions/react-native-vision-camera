@@ -1,36 +1,16 @@
+
 {
+  "extends": "../tsconfig",
   "compilerOptions": {
-    "allowJs": false,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "esModuleInterop": true,
-    "importsNotUsedAsValues": "error",
-    "forceConsistentCasingInFileNames": true,
-    "jsx": "react-native",
-    "lib": ["esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noStrictGenericChecks": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noUncheckedIndexedAccess": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "outDir": "lib"
+    "paths": {
+      "react-native-vision-camera": ["../src/index"]
+    },
   },
   "include": [
     "src",
-    ".eslintrc.js",
-    "babel.config.js",
+    "index.js"
   ],
   "exclude": [
-    "node_modules",
-    "lib",
-    "docs",
-    "example"
+    "node_modules"
   ]
 }

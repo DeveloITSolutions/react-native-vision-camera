@@ -1,81 +1,48 @@
-<a href="https://margelo.io">
-  <img src="./docs/static/img/banner.svg" width="100%" />
-</a>
-
-<h1 align="center">Vision Camera</h1>
-
-<div align="center">
-  <img src="docs/static/img/11.png" width="50%">
-  <br />
-  <br />
-  <blockquote><b>📸 The Camera library that sees the vision.</b></blockquote>
-  <pre align="center">npm i <a href="https://www.npmjs.com/package/react-native-vision-camera">react-native-vision-camera</a><br/>npx pod-install                 </pre>
-  <a align="center" href='https://ko-fi.com/F1F8CLXG' target='_blank'>
-    <img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' />
-  </a>
-  <br/>
-  <a align="center" href="https://github.com/mrousavy?tab=followers">
-    <img src="https://img.shields.io/github/followers/mrousavy?label=Follow%20%40mrousavy&style=social" />
-  </a>
-  <br />
-  <a align="center" href="https://twitter.com/mrousavy">
-    <img src="https://img.shields.io/twitter/follow/mrousavy?label=Follow%20%40mrousavy&style=social" />
-  </a>
-</div>
-
-<br/>
-<br/>
-
 <div>
-  <img align="right" width="35%" src="docs/static/img/example.png">
+  <img align="right" width="35%" src="../docs/static/img/example.png">
+
+  <h1>Vision Camera playground</h1>
+
+  <h2>Overview</h2>
+
+  <p align="left">
+  This is a demo application featuring some of the many features of the Vision Camera:
+
+  * Photo capture
+  * Video capture
+  * Flipping device (back camera <-> front camera)
+  * Device filtering (ultra-wide-angle, wide-angle, telephoto, or even combined virtual multi-cameras)
+  * Format filtering (targeting 60 FPS, best capture size, best matching aspect ratio, etc.)
+  * Zooming using [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler) and [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated)
+  * Smoothly switching between constituent camera devices (see [demo on my Twitter](https://twitter.com/mrousavy/status/1365267563375116292))
+  * HDR mode
+  * Night mode
+  * Flash for photo capture
+  * Flash for video capture
+  * Activating/Pausing the Camera but keeping it "warm"
+  * Using the Example Frame Processor Plugin
+  </p>
 </div>
 
-### Documentation
+## Get started
 
-* [Guides](https://mrousavy.github.io/react-native-vision-camera/docs/guides)
-* [API](https://mrousavy.github.io/react-native-vision-camera/docs/api)
-* [Example](./example/)
+To try the playground out for yourself, run the following commands:
 
-### Features
-
-* Photo, Video and Snapshot capture
-* Customizable devices and multi-cameras (smoothly zoom out to "fish-eye" camera)
-* Customizable FPS
-* [Frame Processors](https://mrousavy.github.io/react-native-vision-camera/docs/guides/frame-processors) (JS worklets to run QR-Code scanning, facial recognition, AI object detection, realtime video chats, ...)
-* Smooth zooming (Reanimated)
-* Fast pause and resume
-* HDR & Night modes
-
-> See the [example](./example/) app
-
-### Example
-
-```tsx
-function App() {
-  const devices = useCameraDevices('wide-angle-camera')
-  const device = devices.back
-
-  if (device == null) return <LoadingView />
-  return (
-    <Camera
-      style={StyleSheet.absoluteFill}
-      device={device}
-      isActive={true}
-    />
-  )
-}
+```sh
+git clone https://github.com/mrousavy/react-native-vision-camera
+cd react-native-vision-camera
+yarn bootstrap
 ```
 
-### Adopting at scale
+### iOS
 
-<a href="https://github.com/sponsors/mrousavy">
-  <img align="right" width="160" alt="This library helped you? Consider sponsoring!" src=".github/funding-octocat.svg">
-</a>
+1. Open the `example/ios/VisionCameraExample.xcworkspace` file with Xcode
+2. Change signing configuration to your developer account
+3. Select your device in the devices drop-down
+4. Hit run
 
-VisionCamera is provided _as is_, I work on it in my free time.
+### Android
 
-If you're integrating VisionCamera in a production app, consider [funding this project](https://github.com/sponsors/mrousavy) and <a href="mailto:me@mrousavy.com?subject=Adopting VisionCamera at scale">contact me</a> to receive premium enterprise support, help with issues, prioritize bugfixes, request features, help at integrating VisionCamera and/or Frame Processors, and more.
-
-<br />
-
-#### 🚀 Get started by [setting up permissions](https://mrousavy.github.io/react-native-vision-camera/docs/guides/)!
+1. Open the `example/android/` folder with Android Studio
+2. Select your device in the devices drop-down
+3. Hit run
